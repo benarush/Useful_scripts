@@ -91,8 +91,8 @@ for my $item(@{$dataHush}){
 	}
 	eval
 	{
-		$sqlQueryShob="INSERT INTO device42_it_invent (HOST_NAME,OS_NAME,ENVIRONMENT_NAME,MANUFACTURER_NAME,IP_ADDRESS,APP_OWNER_NAME,SRV_OWNER_NAME,SLA,ROLE_NAME,INSERT_TIME,EQUIP_DESC) VALUES ('$name','$os','$service_level','$manufacturer','$ip','$HAO','$HSO','$sla','$HAN',TO_DATE('$datestring','YYYY/MM/DD HH24:MI:SS'),'$type')";
-		$sqlQueryDba="INSERT INTO device42_servers_info (HOSTNAME,IP_ADDRESS,ENVIRONMENT,SERVER_TYPE) VALUES ('$Name','$IP','$ServiceLevel','$Type')";
+		$sqlQueryShob="INSERT INTO device42<table name> (HOST_NAME,OS_NAME,ENVIRONMENT_NAME,MANUFACTURER_NAME,IP_ADDRESS,APP_OWNER_NAME,SRV_OWNER_NAME,SLA,ROLE_NAME,INSERT_TIME,EQUIP_DESC) VALUES ('$name','$os','$service_level','$manufacturer','$ip','$HAO','$HSO','$sla','$HAN',TO_DATE('$datestring','YYYY/MM/DD HH24:MI:SS'),'$type')";
+		$sqlQueryDba="INSERT INTO device42<other table name> (HOSTNAME,IP_ADDRESS,ENVIRONMENT,SERVER_TYPE) VALUES ('$Name','$IP','$ServiceLevel','$Type')";
 		$db{ShobProdDB}{dbConnection} -> prepare( $sqlQueryShob ) -> execute();
 		$db{DbaProdDb}{dbConnection} -> prepare( $sqlQueryDba ) -> execute();
 	}
