@@ -19,7 +19,7 @@ function WriteLog($Text)
 function SendTrap($User,$Type,$strMessage)
 {
     WriteLog $strMessage
-    $strMessage = 'C:\Shob\Active_Derectory_App_Users\TrapGen.exe -d <Destination Ip> -c public -o 1.3.6.1.4.1.27004 -s 913 -g 6 -v .1.3.6.1.4.1.27004.913.1 s ' + $User + ' -v .1.3.6.1.4.1.27004.913.2 s "' + $strMessage + '" -v .1.3.6.1.4.1.27004.913.3 s "' + $Type +'"' 
+    $strMessage = 'C:\gogo\Active_Derectory_App_Users\TrapGen.exe -d <Destination Ip> -c public -o 1.3.6.1.4.1.270504 -s 913 -g 6 -v .1.3.6.1.4.1.270504.913.1 s ' + $User + ' -v .1.3.6.1.4.1.27004.913.2 s "' + $strMessage + '" -v .1.3.6.1.4.1.27004.913.3 s "' + $Type +'"' 
     cmd.exe /c $strMessage
     $strMessage
 }
